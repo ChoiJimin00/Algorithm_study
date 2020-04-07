@@ -1,41 +1,47 @@
-//BJ_2805  binary_search
-#include<iostream>
-#include<algorithm>
-#include<vector>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-int height(int, int); 
-vector <int> tree;
+const int MAX = 1000000;
+long long tree[MAX];
+int N;
+long long M;
 
-int main() {
-	int n, m;
+bool possible(long long height){
+	long long len = 0;
 
-	cin >> n >> m;
-	for (int i = 0; i < n; i++) {
-		int num;
-		cin >> num;
-		tree.push_back(num);
-	}
-	cout << height(n, m);
+	for (int i = 0; i < N; i++)
+		if (tree[i] - height > 0) {
+			len += tree[i] - height;
+		}
+
+	if (len >= M) { return true; }
+	return false;
 }
 
-int height(int n, int m) {
-	int max = 0, result = 0;
-	int left = 0, right = *max_element(tree.begin(), tree.end());
+int main(void){
+	cin >> N >> M;
 
-	while (left <= right) {
-		float mid = (left + right) / 2;
-		int total = 0;
-		for (int i = 0; i < n; i++) {
-			if (mid < tree[i]) { total += (tree[i] - mid); }
-		}
-
-		if (total >= m) {
-			if (result < mid) { result = mid; }
-			left = mid + 1;
-		}
-		else { right = mid - 1; }
-
-		return result;
+	long long low = 1, high = 0;
+	for (int i = 0; i < N; i++)
+	{
+		cin >> tree[i];
+		high = max(high, tree[i]);
 	}
+
+	long long result = 0;
+	while (low <= high){
+		long long mid = (low + high) / 2;
+
+		if (possible(mid))
+		{
+			result = max(result, mid);
+			low = mid + 1;
+		}
+
+		else { high = mid - 1;}
+	}
+
+	cout << result << "\n";
 }
