@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="#" method="get">
+<select id="componenet" size="3" multiple>
+<option value="comp1" selected>comp1</option>
+<option value="comp2" selected>comp2</option>
+<option value="comp3">comp3</option>
+<option value="comp4">comp4</option>
+</select><br>
+<input type="submit" value="선택완료">
+<input type="reset" value="재설정"><br>
+<select name="num">
+<optgroup label="폰번호">
+<option value="010">010</option>
+<option value="070">070</option>
+<option value="080">080</option>
+</optgroup>
+</select>
+<input type="submit" value="선택완료"><input type="reset" value="재설정">
+</form>
+
+<hr>
+<form action="#" method="post">
+<fieldset>
+<legend>회원정보</legend>
+Name:<input type="text" name="name"><br>
+Phone:<input type="text" name="phone"><br>
+<label for="male">Male</label>
+<input type="radio" name="gender" value="male">
+<label for="female">Female</label>
+<input type="radio" name="gender" value="female">
+</fieldset>
+<input type="submit" value=" 저  장 ">
+</form>
+
+<hr>
+<form action="#" method="get">
+<p>Select your favorite color: <input type="color" name="color"></p>
+<p>Birthday: <input type="date" name="date"></p>
+<p>Birthdat (date and time): <input type="datetime-local" name="time"></p>
+<p>E-mail: <input type="email" name="mail" required></p>
+<input type="submit" value="제출"><br>
+</form>
+
+<hr>
+<form action="#" method="get">
+<p>Quatity (between 1 and 5): <input type="number" name="quatity" min="1" max="5" value="1" step="1"></p>
+<p><input type="range" name="point" min="0" max="10" value="5"></p>
+<p>Search Google: <input type="search" name="googlesearch"></p>
+<p>Telephone: <input type="tel" name="phone"></p>
+<p>Add your homepage: <input type="url" name="homepage"></p>
+<input type="submit" value=" 수   정 ">
+</form>
+
+<hr> <!-- input pattern -->
+<form action="#" method="post">
+<p>코드 입력: <input type="text" name="code" pattern="[A-Za-z]{3}" title="영숫자3자리"></p>
+<p>Password: <input type="password" name="pwd" pattern=".{6,}" title="6자 이상 문자"></p>
+<p>E-mail: <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></p>
+<input type="submit" value="제출">
+</form>
+
+
+
+</body>
+</html>
