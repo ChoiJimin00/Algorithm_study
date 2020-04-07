@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+</head>
+<body>
+<form action="#" method="get">
+ID:<input type="text" name="id" size="10" maxlength="8"><br>
+Name:<input type="text" name="name" value="홍길동"><br>
+PWD:<input type="password" name=pwd"><br>
+<input type="checkbox" name="chk" value="computer" checked>computer
+<input type="checkbox" name="chk" value="mouse">mouse<br>
+<input type="radio" name="fruit" value="apple">apple
+<input type="radio" name="fruit" value="pear" checked>pear
+<input type="radio" name="fruit" value="orange">orange<br>
+<input type="reset" value="reset">
+<input type="submit" value="submit">
+</form>
+
+<hr>
+<form action="#" method="post" enctype="multipart/form-data">
+ 그림파일만 선택: <input type="file" accept="image/jpg, image/gif" name="file"><br>
+ <input type="submit" value="파일 전송">
+</form>
+
+<hr>
+<form action="#" method="post">
+텍스트 상자 입력<br>
+<textarea cols="50" rows="5" name="textarea">초기값
+</textarea><br>
+<input type="image" src="../img/kevin1.jpg" width="100" height="50" alt="submit">
+</form>
+
+<hr>
+<form action="#" method="get">
+<p><input type="button" name="button" value="일반 버튼입니다." onclick="alert('일반버튼 클릭')"></p>
+<p><button type="button" onclick="alert('그림 넣은 버튼')">
+<img src="../img/kevin1.jpg" width="100" height="50" alt="어라">버튼에 그림넣기</button></p>
+<input type="reset" value="취소버튼">
+<input type="submit" value="전송입니다.">
+</form>
+
+</body>
+</html>
+
+<!-- 
+checkbox는 중복 선택 가능 / radio는 중복 선택 불가 
+enctype은 input의 파일을 서버에 전송하는 방식 중 하나(이진 파일을 전송할 때 사용)
+ -->
