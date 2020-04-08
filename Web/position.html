@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position과 display</title>
+<style>
+body {	height:1000px; }
+div { width:300px; height:150px;border:1px solid black;} 
+
+#d2 {
+position:relative; 
+left:50px;
+top:50px; 
+background-color:cyan;}
+
+#d3 {
+position:absolute;
+left:50px;
+background-color:yellow;
+}
+
+div.d4 { 
+position:fixed;
+top:30px;
+right:10px;
+background-color:#ff99ff;
+}
+
+div.d4:hover {
+visibility: hidden;
+}
+
+</style>
+</head>
+<body>
+<h1>position</h1>
+<div id="d1">
+	<h3>static</h3> 
+	블록 요소들이 박스처럼 상하로 쌓이고, 인라인 요소들은 한 줄에 기술된 순서대로 배치됨
+</div>
+<div id="d2">
+	<h3>relative</h3>
+	정상적인 흐름에 따른 위치를 기준점으로 상대적인 위치에 배치됨
+	<div id="d3">
+		<h3>absolute</h3>
+		상위 요소를 기준으로 top, left, bottom, right 만큼 떨어진 위치에 배치
+	</div>
+</div>
+<div class="d4">
+	<h3>fixed</h3> 
+	웹브라우저의 right 10px, top 30px에 항상 위치시킵니다.
+</div>
+</body>
+</html>
