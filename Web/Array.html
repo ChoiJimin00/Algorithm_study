@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열과 이벤트 핸들링</title>
+<script>
+ var arr = ["yellow", "red", "green", "purple", "cyan", "white"];
+ var idx = 0;
+ 
+ function changeColor(){
+		 document.getElementById("mybody").style.backgroundColor = arr[idx];
+		 if(idx==arr.length-1) idx=0;
+		 else idx++;
+ }
+ </script>
+</head>
+<body id="mybody">
+<input type="button" value="색깔 바꾸기" onclick="changeColor()">
+</body>
+</html>
