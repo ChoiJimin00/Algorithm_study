@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+ function Rect(width, height){
+	this.width = width;
+	this.height = height;
+	this.getArea = function(){
+		return this.width * this.height;
+	}
+}
+
+ function calArea(){
+	var width = prompt("가로 길이"+"");
+	var height = prompt("세로 길이"+"");
+	
+	var r = new Rect(width,height);
+	alert("넓이 : " + r.getArea());
+}
+ </script>
+</head>
+<body>
+<p>
+	<button type="button" onclick="calArea()">면적 계산하기</button>
+</p>
+</body>
+</html>
