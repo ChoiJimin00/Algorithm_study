@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>새창에서 얻은 값 출력하기</title>
+<script>
+ 
+ function addrWindow(){
+	window.open("02_popup.html","address","width=300,height = 200,toolbar = no");
+}
+
+</script>
+</head>
+<body>
+<form name="frm">
+<input type="text" size="30" name="addr" id="addr">
+<input type="button" value="주소검색" onclick="addrWindow()">
+</form>
+</body>
+</html>
