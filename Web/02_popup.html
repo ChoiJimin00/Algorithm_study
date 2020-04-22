@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주소 선택</title>
+<script>
+ function myaddr(obj){
+	document.getElementById("addr").value = obj.innerHTML;
+	document.getElementById("addr").focus();
+}
+ 
+ function toCalledWindow(){
+	 var addValue = document.getElementById("addr").value;
+	 window.opener.document.getElementById("addr").value = addValue;
+	 self.close();
+ }
+</script>
+</head>
+<body>
+<a href="#" onclick="myaddr(this)">인천 남구 용현동</a><br>
+<a href="#" onclick="myaddr(this)">인천 남구 용현동 인하대학교</a><br>
+<a href="#"  onclick="myaddr(this)">인천 남구 용현동 기숙사</a><br>
+<br>
+<p>선택 주소</p>
+<input type="text" id="addr" size="30">
+<p align="right"><input type="button" value="확인" onclick="toCalledWindow()">
+</body>
+</html>
