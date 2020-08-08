@@ -1,34 +1,32 @@
+//BJ_9093
 #include<iostream>
-#include<algorithm>
 #include<string>
+#include<stack>
 using namespace std;
 
 int main() {
 	int n;
-	string str, temp;
+	string str;
+	stack <char> temp;
 
 	cin >> n;
+	cin.ignore();
 	for (int i = 0; i < n; i++) {
-		cin.ignore();
 		getline(cin, str);
+		str += '\n';
 
-		temp = "";
 		for (int idx = 0; idx < str.size(); idx++) {
-			if (str[idx] == ' ') {
-				reverse(temp.begin(), temp.end());
-				cout << temp << ' ';
-				temp.clear();				
+			if (str[idx] == ' ' || str[idx] == '\n') {
+				while (!temp.empty()) {
+					cout << temp.top();
+					temp.pop();
+				}
+				cout << " ";
 			}
 			else {
-				temp += str[idx];
+				temp.push(str[idx]);
 			}
-			
 		}
-		
-
-		reverse(temp.begin(), temp.end());
-		cout << temp << '\n';
-
+		cout << "\n";
 	}
-
 }
