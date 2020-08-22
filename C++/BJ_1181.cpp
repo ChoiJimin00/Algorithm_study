@@ -1,25 +1,37 @@
+//BJ_1181
 #include<iostream>
+#include<vector>
 #include<algorithm>
 using namespace std;
 
-string diction[20001];
-int diction_length[20001];
+vector <string> dic;   // save input string
+
+// sort standard (if string size is same, return alphabet standard, else return size standard)
+bool compare(string a, string b) {
+	if (a.size() == b.size()) {
+		return a < b;
+	}
+	else {
+		return a.size() < b.size();
+	}
+}
 
 int main() {
 	int n;
 	string input;
+	string tmp;
 
 	cin >> n;
 	for (int i = 0; i < n; i++) {
-		//cin >> input;
-		cin >> diction[i];
-		diction_length[i] = diction[i].length();
+		cin >> input;
+		dic.push_back(input);
+	}
 
-		//cout << str[i] << "   /  " << diction_length[i] << "\n";
+	sort(dic.begin(), dic.end(), compare);
 
-		//for (int j = 0; j < str[i].length(); j++) {
-		//	cout << str[i][j] << ",";
-		//}
-		//cout << "\n";
+	for (int i = 0; i < n; i++) {
+		if (tmp == dic[i]) continue;   // removing duplication
+		cout << dic[i] << "\n";
+		tmp = dic[i];
 	}
 }
