@@ -38,6 +38,7 @@ if __name__ == '__main__':
     for i in range(10):
         queue.enqueue(i)
     print(queue.size())
+    print(queue.dequeue())
     print(queue.peek())
     print(queue.dequeue())
     print(queue.size())
