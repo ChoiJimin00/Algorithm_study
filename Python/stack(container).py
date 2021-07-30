@@ -41,3 +41,6 @@ class Stack(object):
             node = node.pointer
         print()
 
+
+if __name__ == '__main__':
+    stack = Stack()
