@@ -28,6 +28,7 @@ def prime_fermat(n):
 
 
 n1 = random.randint(0,100)
+
 print(n1)
 print(prime_brute(n1))
 print(prime_mini_brute(n1))
