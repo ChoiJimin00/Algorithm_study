@@ -15,6 +15,7 @@ def get_grade(grade):
         return 'F'
 
 
+
 def solution(scores):
     le = len(scores)
 
