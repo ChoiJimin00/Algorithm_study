@@ -18,6 +18,4 @@ def solution(v):
 
     return answer
 
-
-
 print(solution([[1, 1], [2, 2], [1, 2]]))
