@@ -2,6 +2,7 @@ def solution(v):
     answer = []
     x_list = []
     y_list = []
+    
 
     for x,y in v:
         x_list.append(x)
