@@ -1,4 +1,4 @@
-# 깊은 복사
+# 깊은 복사  
 import string
 
 peop = {'a','b','c'}
