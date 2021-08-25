@@ -44,6 +44,7 @@ print(book.splitlines())
 # A.split(t,n) : 문자열 A에서 문자열 t를 기준으로 정수 n번 만큼 분리한 문자열 리스트 반환
 # n 지정 X -  대상 문자열을 t로 분리 / t 지정 X - 공백 문자로 구분한 문자열 리스트 반환
 # 추가로 rsplit(t,n) lsplit(t,n) 있음
+
 event = 'new year*x-mas*happy'
 print(event.split('*'))
 print(event.split('*')[1].split('-'))
