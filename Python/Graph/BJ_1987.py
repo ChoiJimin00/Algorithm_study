@@ -28,4 +28,4 @@ if __name__ == '__main__':
     for _ in range(R):
         board.append(list(map(str,input())))
         
-    print(bfs(0,0))
+    print(bfs(0,0)) 
