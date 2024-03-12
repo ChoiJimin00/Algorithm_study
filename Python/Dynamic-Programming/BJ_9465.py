@@ -5,6 +5,9 @@ def sticker_val():
     global sticker
     n = len(sticker[0])
     
+    if n == 1: 
+        return max(sum(sticker,[]))
+    
     dp = [[0]*n for _ in range(2)]
     dp[0][0], dp[1][0] = sticker[0][0], sticker[1][0]
     dp[0][1] = dp[1][0] + sticker[0][1]
@@ -25,5 +28,5 @@ if __name__ == '__main__':
         
         for _ in range(2):
             sticker.append(list(map(int, input().split())))
-            
+        
         print(sticker_val())
