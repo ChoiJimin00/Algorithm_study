@@ -6,7 +6,7 @@ input = sys.stdin.readline
 def bfs(x,y):
     answer = 1
     temp = [[0,0,-1,1], [1,-1,0,0]] # 남, 북, 서, 동
-
+    
     q = set([(x,y,board[x][y])])
 
     while q:
