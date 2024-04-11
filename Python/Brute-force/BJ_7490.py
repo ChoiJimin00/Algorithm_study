@@ -2,6 +2,7 @@ import sys
 import copy
 input = sys.stdin.readline
 
+# ' ', '+', '-'의 모든 중복 조합을 찾음
 def recur(arr, m):
     global formular
     if len(arr) == m:
@@ -19,7 +20,6 @@ def recur(arr, m):
     arr.append('-')
     recur(arr,m)
     arr.pop()
-
 
 if __name__ == '__main__':
     N = int(input())
