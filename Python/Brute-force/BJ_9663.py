@@ -20,7 +20,7 @@ def dfs(start):
     
     else:
         for i in range(N):
-            #[start, i]에 퀸을 놓음
+            #[start, i]에 퀸을 놓음ㄴ
             row[start] = i
             if not chk_attack(start):
                 dfs(start+1)
