@@ -2,9 +2,10 @@ import sys
 input = sys.stdin.readline
 
 def floyd(n,edges):
-    map = [[1e9]*n for _ in range(n) ]
     
     ## 그래프 초기화
+    map = [[1e9]*n for _ in range(n) ]
+    
     for e in edges:
         map[e[0]-1][e[1]-1] = min(map[e[0]-1][e[1]-1],e[2])
         
