@@ -9,7 +9,7 @@ def dfs1(v):
     visited[v] = True
     for i in graph[v]:
         if not visited[i]:
-            dfs(i)
+            dfs1(i)
             
 # stack으로 구현한 DFS        
 def dfs2(start):
@@ -18,11 +18,11 @@ def dfs2(start):
     stack = [start]
     while stack:
         v = stack.pop()
-        visited[v] = True
         
         for i in graph[v]:
             if not visited[i]:
                 stack.append(i)
+                visited[i] = True
     
 
 if __name__ == '__main__':
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     visited = [False]*(n+1)
     for i in range(1,n+1):
         if not visited[i]:
-            dfs1(i)
+            dfs2(i)
             cnt += 1
             
     print(cnt)
